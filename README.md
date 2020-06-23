@@ -10,17 +10,28 @@ This project is design to be completed on [Pluralsight](https://pluralsight.com)
 
 ## Installation
 
-### Windows
-Open a command prompt or powershell and run the following commands, replacing 'project-root' with the path to the root folder of the project.
+### Local environment setup
+Installing Python3 and Pip
 ```
-> cd 'project-root'
-> python -m venv venv
-> venv\Scripts\activate.bat
-> pip install -r requirements.txt
+> to verify Python3 was installed correctly type:
+$ python3 -V
+> to verify pip3 was installed correctly type:
+$ pip3 -V
+> to verify Python3 is running under the default command line, type:
+$ export PATH="/usr/local/opt/python/libexec/bin:$PATH" >> ~/.bashrc
+
+> to verify local environment, type:
+$ cd 'project-root'
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+> finally run a tests, type:
+$ pytest
 ```
 
 ### macOS
 Open a terminal and run the following commands, replacing 'project-root' with the path to the root folder of the project.
+
 ```
 $ cd 'project-root'
 $ python3 -m venv venv
