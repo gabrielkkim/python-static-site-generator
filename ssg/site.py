@@ -18,5 +18,7 @@ class Site: # step 2, create a class object
 
         for path in self.source.rglob("*"): # recreate all paths
             """call the current iteration path """
-            if path.is_dir(): # test if current path is a directory
-                self.create_dir(path) # if it's a directory call create_dir()
+            if path.is_dir():
+                self.create_dir(path)
+                # test if current path is a directory
+                # if it's a directory call create_dir()
