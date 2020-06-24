@@ -13,11 +13,11 @@ class Site: # step 2, create a class object
         """variable directory needs to contain full path
            to the destination folder."""
 
-        directory.mkdir(parents=True, exists_ok=True) # make a directory
+        directory.mkdir(parents=True, exist_ok=True) # make a directory
         """call mkdir() method on directory"""
 
     def build(self): # make the destination directory
-        self.dest.mkdir(parents=True, exists_ok=True)
+        self.dest.mkdir(parents=True, exist_ok=True)
 
         for path in self.source.rglob("*"): # recreate all paths
             """call the current iteration path """
