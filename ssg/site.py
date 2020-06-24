@@ -6,19 +6,12 @@ class Site: # step 2, create a class object
         self.source = Path(source) # convert source to a Path() object
         self.dest = Path(dest) # repeat for dest
 
-    def create_dir(self, path): # create a method called create_dir()
+    def create_dir(self, path):
         directory = self.dest / path.relative_to(self.source)
-        # self.dest is first / relative_to() is second
+        directory.mkdir(parents=True, exist_ok=True)
 
-        directory.mkdir(parents=True, exist_ok=True) # make a directory
-        """call mkdir() method on directory"""
-
-    def build(self): # make the destination directory
+    def build(self):
         self.dest.mkdir(parents=True, exist_ok=True)
-
-        for path in self.source.rglob("*"): # recreate all paths
-            """call the current iteration path """
+        for path in self.source.rglob("*"):
             if path.is_dir():
                 self.create_dir(path)
-                # test if current path is a directory
-                # if it's a directory call create_dir()
