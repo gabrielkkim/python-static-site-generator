@@ -13,7 +13,6 @@ class Site: # step 2, create a class object
 
     def build(self): # make the destination directory
         self.dest.mkdir(parents=True, exist_ok=True)
-
-        for path in self.source.rglob("*"): # recreate all paths
-            if path.is_dir():# test if current path is a directory
-                self.create_dir(path) # if it's a directory call create_dir()
+    for path in self.source.rglob("*"):# recreate all paths
+        if path.is_dir():# test if current path is a directory
+            self.create_dir(path) # if it's a directory call create_dir()
