@@ -1,6 +1,6 @@
-from pathlib import Path # step 1
+from pathlib import Path
 
-class Site: # step 2, create a class object
+class Site:
 
     def __init__(self, source, dest): # this is the Site class constructor
         self.source = Path(source) # convert source to a Path() object
