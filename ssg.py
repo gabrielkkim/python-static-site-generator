@@ -1,5 +1,4 @@
-import typer # Import typer
-# set up the command line interface CLI
+import typer # Import typer set up the command line interface CLI
 
 from ssg.site import Site # ./ssg/site
 
