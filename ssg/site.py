@@ -2,7 +2,7 @@ from pathlib import Path
 
 class Site:
 
-    def __init__(self, source, dest): # this is the Site class constructor
+    def __init__(self, source, dest, parsers=None):
         self.source = Path(source) # convert source to a Path() object
         self.dest = Path(dest) # repeat for dest
 
