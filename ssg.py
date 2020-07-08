@@ -1,5 +1,7 @@
 import typer # Import typer set up the command line interface CLI
 
+import ssg.parsers
+
 from ssg.site import Site # ./ssg/site
 
 def main(source="content", dest="dist"): # Config options
