@@ -21,3 +21,6 @@ class Site:
         for parser in self.parsers:
             if parser.valid_extension(extension):
                 return parser
+
+    def run_parser(self, path):
+        
