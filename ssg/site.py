@@ -18,3 +18,4 @@ class Site:
                 self.create_dir(path)
 
     def load_parser(self, extension):
+        for parser in self.parsers:
