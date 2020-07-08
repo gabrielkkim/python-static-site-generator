@@ -16,6 +16,8 @@ class Site:
         for path in self.source.rglob("*"):
             if path.is_dir():
                 self.create_dir(path)
+            elif:
+                
 
     def load_parser(self, extension):
         for parser in self.parsers:
