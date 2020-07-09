@@ -8,3 +8,4 @@ class Content(Mapping):
     __regex = re.compile(__delimiter, re.MULTILINE)
 
     def load(cls, string):
+        __regex = split()
