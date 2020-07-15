@@ -37,3 +37,10 @@ class Content(Mapping):
 
     def __len__(self):
         return len(self.data)
+
+    def __repr__():
+        data = {}
+        for key, value in self.data.items():
+            if key != "content":
+                data[key] = value
+        return str(data)        
