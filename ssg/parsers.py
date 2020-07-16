@@ -30,6 +30,9 @@ class Parser:
     def copy(self, path, source, dest):
         shutil.copy2(path, dest / path.relative_to(source))
 
+class MarkdownParser():
+    extensions = [".md", ".markdown"]  
+
 
 class ResourceParser(Parser):
     extensions = [".jpg", ".png", ".gif", ".css", ".html"]
