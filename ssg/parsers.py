@@ -30,7 +30,7 @@ class Parser:
     def copy(self, path, source, dest):
         shutil.copy2(path, dest / path.relative_to(source))
 
-class MarkdownParser():
+class MarkdownParser(Parser):
     extensions = [".md", ".markdown"]
 
     def parse(self, path, source, dest):
