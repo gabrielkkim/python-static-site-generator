@@ -9,7 +9,11 @@ def main(source="content", dest="dist"): # Config options
     config = {
     "source": source,
     "dest": dest,
-    "parsers": [ssg.parsers.ResourceParser(),],
+    "parsers": [
+        ssg.parsers.ResourceParser(),
+        ssg.parsers.MarkdownParser(),
+        ssg.parsers.ReStructuredTextParser(),
+        ],
     }
     # create an instance called Site class
     Site(**config).build() # attributes are stored in config dictionary
