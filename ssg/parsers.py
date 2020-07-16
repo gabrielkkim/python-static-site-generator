@@ -31,8 +31,10 @@ class Parser:
         shutil.copy2(path, dest / path.relative_to(source))
 
 class MarkdownParser():
-    extensions = [".md", ".markdown"]  
+    extensions = [".md", ".markdown"]
 
+    def parse(self, path, source, dest):
+        content = Content.load(self.read(path))
 
 class ResourceParser(Parser):
     extensions = [".jpg", ".png", ".gif", ".css", ".html"]
