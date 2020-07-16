@@ -30,7 +30,8 @@ class Site:
         if parser is not None:
             parser.parse(path, self.source, self.dest)
         else:
-            print("Not Implemented")
+            self.error("No parser for the {} extension, file skipped!".format(path.suffix)
+            )
 
     @staticmethod
     def error(message):
